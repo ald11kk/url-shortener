@@ -1,8 +1,8 @@
 from pydantic import BaseModel, HttpUrl
 
-class shortenRequest(BaseModel):
+class ShortenRequest(BaseModel):
     url: HttpUrl
 
-class shortenResponse(BaseModel):
+class ShortenResponse(BaseModel):
     short_code: str
     short_url: str

@@ -9,6 +9,8 @@ def generate_short_code(length: int = 6) -> str:
 
 def create_short_url(long_url: str) -> str:
     short_code = generate_short_code()
+    while short_code in url_storage:
+        short_code = generate_short_code()
     url_storage[short_code] = long_url
     return short_code
 
